@@ -29,8 +29,5 @@ export const Wrapper = styled.div<{
     .Value{
         font-weight: bolder;
     }
-    .Value{
-        font-weight: bolder;
-    }
 
 `
