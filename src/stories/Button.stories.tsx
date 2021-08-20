@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import Button, {ButtonProps} from '../components/Button/Button';
 
 export default {
