@@ -1,4 +1,4 @@
-import { Heading1, Heading2, Heading3 } from "./Heading.styled"
+import { Heading1, Heading2, Heading3 } from "./Heading.styles"
 
 export interface HeadingProps {
     level: 1|2|3

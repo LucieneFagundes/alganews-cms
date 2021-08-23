@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react'
-import * as VD from './ValueDescriptor.styled'
+import * as VD from './ValueDescriptor.styles'
 
 export interface ValueDescriptorProps extends HTMLAttributes<HTMLDivElement>{
     description: string

@@ -1,4 +1,4 @@
-import * as FD from './FieldDescriptor.style'
+import * as FD from './FieldDescriptor.styles'
 
 export interface FieldDescriptorProps{
     field: string
