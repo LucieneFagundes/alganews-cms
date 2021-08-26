@@ -1,4 +1,6 @@
+import { transparentize } from "polished";
 import { TableInstance } from "react-table";
+import NoData from "../NoData/NoData";
 import * as T from './Table.styles'
 
 
@@ -9,6 +11,7 @@ export default function Table<T extends Object>({instance} : {instance: TableIns
 
 
   return (
+    <>
     <T.Wrapper {...getTableProps()} cellPadding={0} cellSpacing={0}>
       <T.Heading>
         {
@@ -16,9 +19,9 @@ export default function Table<T extends Object>({instance} : {instance: TableIns
             <T.HeadingRow {...headerGroup.getHeaderGroupProps()}>
               {
                 headerGroup.headers.map(column => (
-                  <th {...column.getHeaderProps()}>
+                  <T.HeadingCell {...column.getHeaderProps()}>
                     {column.render('Header')}
-                  </th>
+                  </T.HeadingCell>
                 ))
               }
             </T.HeadingRow>
@@ -43,6 +46,16 @@ export default function Table<T extends Object>({instance} : {instance: TableIns
         }
       </T.Body>
     </T.Wrapper>
+
+        { 
+          !rows.length && <div style={{backgroundColor: transparentize(0.95, '#274060')}}>
+            <NoData height={360}></NoData>
+            </div>
+
+        }
+
+
+    </>
   )
 
 }

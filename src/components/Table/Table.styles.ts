@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.table `
     color: '#274060';
+    width: 100%;
     background-color: ${transparentize(0.95, '#274060')};
 `
 export const Heading = styled.thead `
@@ -13,6 +14,7 @@ export const HeadingRow = styled.tr ``
 export const HeadingCell = styled.th `
     height: 32px;
     font-size: 14px;
+    padding: 0px 8px;
 `
 
 export const Body = styled.tbody ``
